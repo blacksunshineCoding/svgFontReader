@@ -6,7 +6,7 @@ with svgFontReader you can easy read out the glyphs of a svgFont. Especially for
 ## Usage
 use of the class as followed
 
-	include 'svgFontReader.class.php'
+	include 'svgFontReader.class.php';
     $svg = dirname(__FILE__) . '/font-icons.svg'; // define font-file
     $svgFontReader = new svgFontReader; // initiate class
     $glyphsAll = $svgFontReader->getGlyphs($svg); // get glyphs as array
