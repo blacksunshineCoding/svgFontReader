@@ -1,13 +1,5 @@
 <?php
-/*
- Readme.md
- #Aufruf:
-	$svg = dirname(__FILE__) . '/font-icons.svg'; // define font-file
-	$svgFontReader = new svgFontReader; // initiate class
-	$glyphsAll = $svgFontReader->getGlyphs($svg); // get glyphs as array
-	$glyphsList = $svgFontReader->listGlyphs($svg); //get glyphs as comma-separated
 
- */
 class svgFontReader {
 
 	function listGlyphs($svgFile) {
