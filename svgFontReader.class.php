@@ -37,9 +37,3 @@ class svgFontReader {
 	}
 
 }
-
-function de($array) {
-	echo '<pre>';
-	print_r($array);
-	echo '</pre>';
-}
