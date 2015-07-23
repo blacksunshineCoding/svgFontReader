@@ -1,5 +1,4 @@
 <?php
-
 class svgFontReader {
 
 	function listGlyphs($svgFile) {
@@ -22,16 +21,25 @@ class svgFontReader {
 		$svgArray = json_decode($svgJson, true);
 
 		$svgGlyphs = $svgArray['defs']['font']['glyph'];
-
+		
 		if (count($svgGlyphs) > 0) {
+			$svgGlyphsClear = array();
 
 			foreach ($svgGlyphs as $glyphId => $glyph) {
-				$svgGlyphs[$glyphId] = $glyph['@attributes']['unicode'];
+				if (isset($glyph['@attributes']['unicode'])) {
+					$svgGlyphsClear[$glyphId] = $glyph['@attributes']['unicode'];
+				}
 			}
 
 		}
 
-		return $svgGlyphs;
+		return $svgGlyphsClear;
 	}
 
+}
+
+function de($array) {
+	echo '<pre>';
+	print_r($array);
+	echo '</pre>';
 }
